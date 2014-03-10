@@ -1,0 +1,119 @@
+/*
+body{
+	background: linear-gradient(to top, #ff0000 0%, #870000 60%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -webkit-linear-gradient(to bottom, #ff0000 0%, #870000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -o-linear-gradient(to bottom, #ff0000 0%, #870000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -mozs-linear-gradient(to bottom, #ff0000 0%, #870000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+*/
+
+
+p{
+    padding:0px;
+}
+body{
+    background: #ffffff;
+}
+
+header{
+	margin-bottom: 10px;
+	margin-left: 170px;
+
+}
+.tag-line{
+ color: #FF0000;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.left-panel{
+    border-right:1px solid gray;
+    padding:0px;
+}
+.left-panel img {
+    margin-left: 50px;
+    margin-top: 15px;
+}
+.brand{
+    display: block;
+}
+.brand img {
+	float: left;
+    margin: 5px 10px 0px 20px;
+}
+.top-bar-title {
+ 	color: #FF0000;
+    display: inline-block;
+    font-family: 'Trade Winds',monospace;
+    font-size: 28px;
+    line-height: 100%;
+    position: relative;
+    vertical-align: bottom;
+    margin-top:10px;
+}
+
+.left-panel .nav li{
+	text-align: right;
+}
+
+nav ul:nth-child(1){
+	
+}
+
+.nav > li > a{
+	 /*color: #FFB573;*/
+    color: #ff0000;
+    font-family: monospace;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+     background-color: #ffffff !important;
+     font-size: 22px;
+
+}
+
+nav{
+	/*background-color: #A60000;*/
+
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    min-height: 300px;
+    padding: 0px
+}
+.banner{
+    height: 180px;
+}
+
+article.include {
+    padding: 5px 10px;
+}
+.main-article{
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: white;
+	box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+		z-index: 2;
+	 padding: 0px;
+}
+.main-article h2{
+	    color: #015C65;
+    font-family: Trebuchet MS;
+    font-size: 26px;
+    margin: 20px 10px 10px 19px;
+}
+.right-panel{
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color:#A60000;
+	min-height: 200px;
+	margin-top: 180px;
+}
+
+/* -------------  Utility --------*/
+.divider {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
+    display: block;
+    height: 1px;
+    width: 100%;
+}
