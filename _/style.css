@@ -6,7 +6,12 @@ body{
 	background: -mozs-linear-gradient(to bottom, #ff0000 0%, #870000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 */
-
+.nav a{
+  -webkit-transition: font-size 0.2s ease-in-out;
+  -moz-transition: font-size 0.2s ease-in-out;
+  -o-transition: font-size 0.2s ease-in-out;
+  transition: font-size 0.2s ease-in-out;
+}
 
 p{
     padding:0px;
@@ -64,12 +69,13 @@ nav ul:nth-child(1){
 	 /*color: #FFB573;*/
     color: #ff0000;
     font-family: monospace;
-    font-size: 16px;
+    font-size: 1em;
     text-decoration: underline;
 }
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover, .nav > li > a:focus, .nav > li > a.selected {
      background-color: #ffffff !important;
-     font-size: 22px;
+     font-weight: bold;
+     font-size: 1.5em;
 
 }
 

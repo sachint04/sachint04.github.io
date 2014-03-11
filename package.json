@@ -1,0 +1,32 @@
+{
+  "name": "sachint04.github.io",
+  "version": "0.0.0",
+  "description": "Web project",
+  "main": "index.html",
+  "dependencies": {
+      "grunt":"~0.4.1",
+      "grunt-contrib-watch":"~0.5.3",
+      "grunt-contrib-uglify":"~0.2.2",
+      "matchdep":"~0.1.2"
+
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sachint04/sachint04.github.io.git"
+  },
+  "keywords": [
+    "web",
+    "javascript",
+    "css3",
+    "html5"
+  ],
+  "author": "Sachin Tumbre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sachint04/sachint04.github.io/issues"
+  },
+  "homepage": "https://github.com/sachint04/sachint04.github.io"
+}
