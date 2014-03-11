@@ -13,9 +13,9 @@ module.exports = function(grunt){
     		// }, /*uglify*/ 		
     	//}
  		// watch:{
-		// files:['_/components/js/*.js'],
-		// task:['uglify']
-		// },//watch			
+			// files:['_/components/js/*.js'],
+			// task:['uglify']
+		// },//watch			
     	concat: {
 	        css: {
 	           src: ['css/bootstrap.min.css', 'css/_style.css'],
