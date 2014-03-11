@@ -5,17 +5,17 @@ module.exports = function(grunt){
     	uglify:{
     		my_target:{
     			files:{
-    				'_/js/model.js':['_/components/js/jquery-1.8.3.js','_/components/js/model.js']
+    				'_/js/model.js':['_/components/js/*.js']
     			}
     		}, /*uglify*/
     		watch:{
-    			files:['_/components/js/model.js'],
+    			files:['_/components/js/*.js'],
     			task:['uglify']
     		}//watch
 
     	}
 
     })//initConfig
-    //grunt.registerTask('default', 'watch');
+    grunt.registerTask('default', ['watch']);
 
 }	
