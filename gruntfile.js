@@ -7,7 +7,7 @@ module.exports = function(grunt){
     			files:{
     				'_/js/model.js':['_/components/js/jquery-1.8.3.js','_/components/js/model.js']
     			}
-    		} /*uglify*/,
+    		}, /*uglify*/
     		watch:{
     			files:['_/components/js/model.js'],
     			task:['uglify']
