@@ -1,1 +1,1 @@
-var model={updatePath:function(){}};
+ var model={updatePath:function(){}};
