@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Document</title>
+	  <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<style type="text/css">
+			.box{
+			width: 30px;
+			height: 30px;
+			float:left;
+			position: relative;
+			border-radius: 25px;
+			border:10px solid black;
+		}
+		.box:nth-child(even){
+			background-color: red;
+		}
+		.box:nth-child(odd){
+			background-color: yellow;
+		}
+		.box:nth-child(11),
+		.box:nth-child(12),
+		.box:nth-child(13){
+			clear:both;
+			float: right;
+		}
+		.box:nth-child(14),
+		.box:nth-child(15),
+		.box:nth-child(16),
+		.box:nth-child(17),
+		.box:nth-child(18),
+		.box:nth-child(19),
+		.box:nth-child(20),
+		.box:nth-child(21){
+			float: right;
+			
+		}
+		.box:nth-child(23){
+			clear: both;
+			margin-top: -100px;
+		}
+		.box:nth-child(24){
+			clear: both;
+			margin-top: -150px;
+		}
+		.container{
+			height:200px;
+			width: 500px;
+			border:1px solid;
+			position: relative;
+			border: 5px solid;\
+			overflow: hidden;
+			background-color:black;
+			border-radius:15px;
+		}
+		h1{
+			 color: #FF0000;
+		    font-family: 'Trade Winds',monospace;
+		    font-size: 3em;
+		    left: 105px;
+		    position: absolute;
+		    top: 41px;
+		}
+		input[type="button"]{
+			min-width: 70px;
+			border-radius:5px 5px 5px;
+			border:1px solid gray; 
+			height:30px;
+			margin: 10px 10px 0;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<h1>DevilsCloud</h1>	
+	<input id="start" type="button" value="Start">
+	<input id="stop" type="button" value="Stop">
+<SCRIPT TYPE="text/javascript">
+	$(document).ready(function(){
+	alert("page loaded");
+	//define parameters
+	var len =  $(".box").length;
+	var counter = -1;
+	var canPlay = false;
+	var start;
+	
+	var effects = [ {backgroundColor:"red"},
+					{backgroundColor:"yellow"}];
+
+// Initiate animation sequence
+	var	initSequence = function(){
+		if(!canPlay)return;
+		if(counter < len-1){
+			counter++;
+			animate($(".box").eq(counter), effects[0], effects[1])
+		}else{
+			//swap styles in effects array
+			counter = -1;
+			effects.reverse();
+			initSequence();  
+		}
+	}	
+
+	// execute animate function on Element  
+	function animate(_elem, _start, _end){
+		$(_elem).css(_start);//set default state;
+		//initiate animation
+		$(_elem).animate(
+			_end,50,function(){
+				initSequence();
+			}
+		);
+	}
+	
+	//Define click events for "Start" and "Stop" button
+	$("input#start").click(function(){
+		if(!canPlay){
+			canPlay = true;
+			initSequence();
+		}
+	})
+	$("input#stop").click(function(){
+		canPlay = false;
+	})
+	
+})
+</SCRIPT>
+</body>
+</html>
