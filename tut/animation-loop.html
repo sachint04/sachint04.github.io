@@ -5,10 +5,14 @@
 
 	<title>Document</title>
 	  <link href='http://fonts.googleapis.com/css?family=Trade+Winds' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/style.css"/>
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 	<style type="text/css">
-			.box{
+		.center{
+			position: relative;
+			width: 880px;
+			margin:0 auto;			
+		}
+		.box{
 			width: 30px;
 			height: 30px;
 			float:left;
@@ -56,14 +60,20 @@
 			overflow: hidden;
 			background-color:black;
 			border-radius:15px;
+			margin: 0 auto;
 		}
 		h1{
 			 color: #FF0000;
 		    font-family: 'Trade Winds',monospace;
 		    font-size: 3em;
-		    left: 105px;
+		    left: 105px;	
 		    position: absolute;
 		    top: 41px;
+		}
+		.btHolder{
+			width: 500px;
+			margin: 0 auto;
+			display: block;
 		}
 		input[type="button"]{
 			min-width: 70px;
@@ -77,6 +87,7 @@
 		</style>
 </head>
 <body>
+	<div class="center">
 	<div class="container">
 		<div class="box"></div>
 		<div class="box"></div>
@@ -102,30 +113,34 @@
 		<div class="box"></div>
 		<div class="box"></div>
 		<div class="box"></div>
+		<h1>DevilsCloud</h1>
 	</div>
-	<h1>DevilsCloud</h1>	
-	<input id="start" type="button" value="Start">
-	<input id="stop" type="button" value="Stop">
+		
+	<div class="btHolder">
+		<input id="start" type="button" value="Start">
+		<input id="stop" type="button" value="Stop">
+	</div>
+	</div>
 <SCRIPT TYPE="text/javascript">
 	$(document).ready(function(){
-	alert("page loaded");
 	//define parameters
 	var len =  $(".box").length;
 	var counter = -1;
 	var canPlay = false;
 	var start;
 	
-	var effects = [ {backgroundColor:"red"},
-					{backgroundColor:"yellow"}];
+	var effects = [ "red",	"yellow"];
 
 // Initiate animation sequence
 	var	initSequence = function(){
 		if(!canPlay)return;
+		
 		if(counter < len-1){
 			counter++;
-			animate($(".box").eq(counter), effects[0], effects[1])
+			animate($(".box").eq(counter), {backgroundColor:effects[0]}, {backgroundColor:effects[1]})
 		}else{
 			//swap styles in effects array
+			$(".container h1").css("color", effects[1])
 			counter = -1;
 			effects.reverse();
 			initSequence();  
@@ -134,7 +149,9 @@
 
 	// execute animate function on Element  
 	function animate(_elem, _start, _end){
+		console.log($(_elem).id + " animate: "+ _start.backgroundColor + " | "+ _end.backgroundColor);
 		$(_elem).css(_start);//set default state;
+		
 		//initiate animation
 		$(_elem).animate(
 			_end,50,function(){
@@ -145,9 +162,10 @@
 	
 	//Define click events for "Start" and "Stop" button
 	$("input#start").click(function(){
+		
 		if(!canPlay){
 			canPlay = true;
-			initSequence();
+				initSequence();
 		}
 	})
 	$("input#stop").click(function(){
