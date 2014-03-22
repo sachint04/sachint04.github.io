@@ -13,7 +13,6 @@ module.exports = function(grunt){
     		// }, /*uglify*/ 		
     	//}
  		 watch:{
-			files:['_/components/js/*.js'],
 			task:['concat']
 		 },//watch			
 

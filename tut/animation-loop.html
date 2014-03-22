@@ -12,6 +12,7 @@
 			width: 300px;
 			margin:0 auto;			
 		}
+		/* Common properties */
 		.box{
 			width: 20px;
 			height: 20px;
@@ -21,22 +22,16 @@
 			border:2px solid black;
 		}
 		/* Create lights on right sides */
-		.box:nth-child(11),
-		.box:nth-child(12),
-		.box:nth-child(13){
+		.box.right{
 			clear:both;
 			float: right;
 		}
-		.box:nth-child(14),
-		.box:nth-child(15),
-		.box:nth-child(16),
-		.box:nth-child(17),
-		.box:nth-child(18),
-		.box:nth-child(19),
-		.box:nth-child(20),
-		.box:nth-child(21){
+		/* Lights at the bottom */
+		.box.bottom{
 			float: right;			
 		}
+		
+		/* We have to give special treamment to renaming lights */
 		.box:nth-child(23){
 			clear: both;
 			margin-top: -72px;
@@ -95,17 +90,17 @@
 		<div class="box"></div>
 		<div class="box"></div>
 		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
-		<div class="box"></div>
+		<div class="box right"></div>
+		<div class="box right"></div>
+		<div class="box right"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
+		<div class="box bottom"></div>
 		<div class="box"></div>
 		<div class="box"></div>
 		<div class="box"></div>
