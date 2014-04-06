@@ -105,8 +105,16 @@ nav{
     min-height: 300px;
     padding: 0px
 }
+.logo{
+    float:left;
+    width: 250px;
+}
+.logo > img {
+    margin-left: 35px;
+}
 .banner{
     height: 180px;
+    /*float:right;*/
 }
 
 

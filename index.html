@@ -8,25 +8,34 @@
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
 	<link rel="apple-touch-startup-image" href="img/startup.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css" type="text/css">	
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">	
+	<link rel="stylesheet" href="css/_style.css" type="text/css">	
 </head>
 
 <body>
-
+<div style="width:100%;background:#f5f5f5;">
+	
+	<div style="width:1024px;margin:0 auto;">
+		<div class="logo">
+		   <img src="img/logo_outline_112-73.png">
+		   <h1 class="top-bar-title">Devil's Cloud</h1>
+		   <!-- <p class="tag-line">Everything in front end.</p> -->
+		</div>
+	
+		<div class="banner">
+			<img src="img/banner_2.jpg" alt="Kanya kumari" class="showcase">	
+		</div>	
+	</div>
+</div>
 <section class="container" style="width:1020px;">
 	<div class="content row">
-	<section class="main col col-lg-3 left-panel fixed-top">
-		<div>
-		   <img src="img/logo.jpg">
-		   <h1 class="top-bar-title">Devil's Cloud</h1>
-		   <p class="tag-line">Everything in front end.</p>
-		</div>
+	<section class="main col col-lg-2 left-panel">
 		<nav>
 			<ul class="nav nav-list">
 				<li><a href="#">HTML5</a></li>
 				<li><a href="#">JavaScrpit</a></li>
 			
-				<li><a href="#">CSS3</</li>
+				<li><a href="#">CSS3</li>
 			
 				<li><a href="#">RequireJS</a></li>
 			
@@ -41,16 +50,14 @@
 	</section>
 		
 	<section class="main col col-lg-8 main-article">
-		<div class="banner">
-		<img src="img/banner_2.jpg" alt="Kanya kumari" class="showcase">	
-		</div>	
 		<header>
 			<h2>Animation loop using JQuery and CSS3</h2>
 			<p class="info body-text"><span style="font-size:1.3em">I</span> wanted to create a animated banner for a one of my project. Flash wasn't the option for me since flash has dicontinued of mobile devices. So I created small example for who ever thinks it is difficult. You dont need JQuery to create this but since it is quite usefull in reducing code, we will use it. </p>
 
 		</header>
 		<div class="showcase-banner">
-		<object data="tut/animation-loop.html"  width="100%" height="100%" ></object>	
+			<a href="#" data-link="" onClick="window.open('tut/animation-loop.html','','width=400,height=300')">View demo. </a>
+			<!-- <object data="tut/animation-loop.html"  width="100%" height="100%" ></object>	 -->
 		</div>
 		<article style="width:100%;height:100%;padding:10px 20px;overflow:hidden;">
 		<object data="tut/animation-loop-article.html"  width="100%" height="3550px" ></object>
@@ -58,10 +65,17 @@
 		<!-- <article class="include" path="anim-seq/tut1.html"></article> -->
 	</section>
 	
-	<section class="sidebar col col-lg-1 sidebar right-panel hide">
+	<section class="sidebar col col-lg-2 sidebar right-panel">
 		<aside>
-		
-		
+			<div class="component photogrid clearfix">
+				<h2>Photo Gallery</h2>
+				<a href=""><img src="img/gallery/kerala_munnar_01_thumb.jpg" alt=""></a>
+				<a href=""><img src="img/gallery/kerala_munnar_02_thumb.jpg" alt=""></a>
+				<a href=""><img src="img/gallery/kerala_munnar_03_thumb.jpg" alt=""></a>
+				<a href=""><img src="img/gallery/kerala_perriya_01_thumb.jpg" alt=""></a>
+				<a href=""><img src="img/gallery/kerala_perriya_02_thumb.jpg" alt=""></a>
+				<a href=""><img src="img/gallery/kerala_perriya_03_thumb.jpg" alt=""></a>
+			</div>		
 		</aside>
 	</section>
 </div>
