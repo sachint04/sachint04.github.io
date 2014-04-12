@@ -13,29 +13,34 @@ body{
 	background: -mozs-linear-gradient(to bottom, #ff0000 0%, #870000 100%) repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 */
+a{
+    color:red;
+
+}
+/*
 .nav a{
   -webkit-transition: font-size 0.2s ease-in-out;
   -moz-transition: font-size 0.2s ease-in-out;
   -o-transition: font-size 0.2s ease-in-out;
   transition: font-size 0.2s ease-in-out;
 }
-
+*/
 p{
     padding:0px;
 }
 body{
     background: #ffffff;
 }
-
+/*
 header{
 	margin-bottom: 10px;
 	 margin-left: 25px;
 
 
 }
+*/
 .showcase-banner{
-    height:200px;
-    background: #000000;
+   padding: 10px 0 0 20px;
 }
 .body-text{
 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -68,7 +73,7 @@ color:#830202;
  	color: #FF0000;
     display: inline-block;
     font-family: 'Trade Winds',monospace;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 100%;
     position: relative;
     vertical-align: bottom;
@@ -78,14 +83,13 @@ color:#830202;
 .left-panel .nav li{
 	text-align: right;
 }
-
+/*
 nav ul:nth-child(1){
 	
 }
 
 .nav > li > a{
-	 /*color: #FFB573;*/
-    color: #ff0000;
+  color: #ff0000;
     font-family: monospace;
     font-size: 1em;
     text-decoration: underline;
@@ -97,34 +101,52 @@ nav ul:nth-child(1){
 
 }
 
-nav{
-	/*background-color: #A60000;*/
+*/
 
-    border-bottom-left-radius: 5px;
+
+.navbar {
+    border: 1px solid rgba(0, 0, 0, 0);
+    margin-bottom: 0px;
+    min-height: 26px;
+    position: relative;
+    border-radius: 0px;
+}
+/*
+nav{
+  border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
     min-height: 300px;
     padding: 0px
 }
+*/
+
+.col-lg-12.topband{
+    padding-left: 0px !important;
+}
 .logo{
-    float:left;
-    width: 250px;
+padding: 0px
 }
-.logo > img {
-    margin-left: 35px;
+.navbar-inverse{
+    background-color: #000000;
 }
-.banner{
-    height: 180px;
-    /*float:right;*/
+.navbar-nav > li > a#branding {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: #FF0000;
+    font-family: Lucida Sans Unicode;
+    font-size: 1em;
+    padding-top: 13px;
+}
+.navbar-nav > li > a {
+ padding-top: 5px;  
+ padding-bottom: 5px; 
 }
 
 
 .main-article{
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	background-color: white;
 	box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
-		z-index: 2;
-	 padding: 0px;
 }
 .main-article h2{
     color: #830202;
@@ -133,12 +155,15 @@ nav{
     margin: 20px 0px;
 }
 .right-panel{
-	border-bottom-right-radius: 5px;
-	border-top-right-radius: 5px;
-	background-color:#A60000;
+	background-color:#f5f5f5;
 	min-height: 200px;
-	margin-top: 180px;
 }
+/* side bar */
+.photogrid img{
+    vertical-align: baseline;
+
+}
+
 
 /* -------------  Utility --------*/
 .divider {
