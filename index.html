@@ -9,39 +9,58 @@
 	<link rel="apple-touch-startup-image" href="img/startup.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">	
-	<link rel="stylesheet" href="css/style.css" type="text/css">	
+	<link rel="stylesheet" href="css/_style.css" type="text/css">	
+
+	<script type="text/javascript" src="//use.typekit.net/rql4bvu.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
-<section class="container" style="width:900px;">
+<section class="container" style="width:1020px;">
 	<div class="content row">
 	<div class="col-lg-12 topband">
-		<div class="banner">
-			<img src="img/banner_2.jpg" alt="Kanya kumari" class="showcase">	
-		</div>
-		<header class="clearfix">
-			
-			<section class="navbar navbar-fixed-top navbar-inverse">
-				<ul class="nav navbar-nav">
-					<li><a id="branding" href="www.devilscloud.com">
-						<img class="logo" src="img/logo-small.png"/></a></li>
-					
-					<li><a href="#">Home</a></li>			
-					<li><a href="#">CSS</a></li>			
-					<li><a href="#">Javascript</a></li>			
-					<li><a href="#">Components</a></li>
-					<li><a href="#">Design</a></li>		
-					<li><a href="#">About me</a></li>
-				</ul>
-			</section>		
-		</header>
+		<div class="content row">
+			<div class="col-lg-5">	
+				<a class="logo" href="wwww.devilscloud.com" ><img src="img/logo_small.png" alt=""></a>
+				<span class="title">Devil's Cloud</span>
+			</div>
+			<div class="col-lg-7 nav">
+				<header>
+					<section class="navbar navbar-fixed-top">
+						<ul class="nav navbar-nav">					
+							<li><a href="#">Home</a></li>			
+							<li><a href="#">CSS</a></li>			
+							<li><a href="#">Javascript</a></li>			
+							<li><a href="#">Components</a></li>
+							<li><a href="#">Design</a></li>		
+							<li><a href="#">About me</a></li>
+						</ul>
+					</section>		
+				</header>	
+			</div>
 	</div>	
-
-			
-	<section>
-
-	</section>
+</div>
+	<!-- 	<div class="banner" >
+			<img src="img/banner_2.jpg" alt="Kanya kumari" class="showcase">	
+		</div> -->
 		
+		
+	<!-- Top band End			 -->
+
+<!-- Row End -->
+<!-- Row Start -->
+<div class="content row">
+	<section class="sidebar col col-lg-3 sidebar right-panel">
+		<div class="component photogrid clearfix">
+			<h2>Photo Gallery</h2>
+			<a href=""><img src="img/gallery/kerala_munnar_01_thumb.jpg" alt=""></a>
+			<a href=""><img src="img/gallery/kerala_munnar_02_thumb.jpg" alt=""></a>
+			<a href=""><img src="img/gallery/kerala_munnar_03_thumb.jpg" alt=""></a>
+			<a href=""><img src="img/gallery/kerala_perriya_01_thumb.jpg" alt=""></a>
+			<a href=""><img src="img/gallery/kerala_perriya_02_thumb.jpg" alt=""></a>
+			<a href=""><img src="img/gallery/kerala_perriya_03_thumb.jpg" alt=""></a>
+		</div>		
+	</section>
 	<section class="main col col-lg-9 main-article">
 		<header>
 			<h2>Animation loop using JQuery and CSS3</h2>
@@ -59,21 +78,10 @@
 		<!-- <article class="include" path="anim-seq/tut1.html"></article> -->
 	</section>
 	
-	<section class="sidebar col col-lg-3 sidebar right-panel">
-		<aside>
-			<div class="component photogrid clearfix">
-				<h2>Photo Gallery</h2>
-				<a href=""><img src="img/gallery/kerala_munnar_01_thumb.jpg" alt=""></a>
-				<a href=""><img src="img/gallery/kerala_munnar_02_thumb.jpg" alt=""></a>
-				<a href=""><img src="img/gallery/kerala_munnar_03_thumb.jpg" alt=""></a>
-				<a href=""><img src="img/gallery/kerala_perriya_01_thumb.jpg" alt=""></a>
-				<a href=""><img src="img/gallery/kerala_perriya_02_thumb.jpg" alt=""></a>
-				<a href=""><img src="img/gallery/kerala_perriya_03_thumb.jpg" alt=""></a>
-			</div>		
-		</aside>
-	</section>
-</div>
 	
+</div>
+</div>
+<!-- Content end -->
 </section>
 <script type="text/javascript" src="js/lib/jquery-1.8.3.js"></script>
 <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
@@ -90,7 +98,17 @@
 		//$story.css("border","1px sold red")
 	}
 	$(document).ready(function(){
+		
 
+			window.onscroll = function(event){
+				if(window.pageYOffset > 180){
+					$('.navbar').css("position","absolute");
+				}else{
+					$('.navbar').css("position","relative");
+				}
+				console.log("on Scroll : "+window.pageYOffset);
+			}
+		
 		
 		//$("#article").height = article
 	})

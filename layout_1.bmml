@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1295" measuredH="467" mockupW="1027" mockupH="467">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::FieldSet" x="425" y="69" w="405" h="73" measuredW="200" measuredH="170" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Showcase</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ButtonBar" x="890" y="162" w="405" h="27" measuredW="278" measuredH="27" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>About%20me%2C%20Javascript%2C%20CSS%20tricks%2C%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="268" y="0" w="718" h="467" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Image" x="425" y="69" w="69" h="47" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <filter>true</filter>
+        <src>./img/logo_midium.png</src>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="494" y="82" w="208" h="-1" measuredW="91" measuredH="24" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Devils%20Cloud</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::TextArea" x="431" y="218" w="405" h="219" measuredW="200" measuredH="140" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Creating%20Animation%20loop%20using%20jQuery</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Paragraph" x="425" y="222" w="402" h="80" measuredW="200" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20%5Bparagraph%5D%20of%20*text*.%0AA%20_second_%20%26row%26%20of%20%7Etext%7E.</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::MultilineButton" x="286" y="142" w="-1" h="-1" measuredW="139" measuredH="124" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Multiline%20Button%0AAbout%20me%0AJavacript%0ACSS%0APhotoshop%0APhotography</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

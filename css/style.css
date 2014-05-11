@@ -121,10 +121,14 @@ nav{
 */
 
 .col-lg-12.topband{
-    padding-left: 0px !important;
+    background: url('..\img\topband.png') no-repeat scroll 0 0 transparent;
+    
 }
 .logo{
 padding: 0px
+}
+.col-lg-9.topband {
+    padding: 0;
 }
 .navbar-inverse{
     background-color: #000000;
