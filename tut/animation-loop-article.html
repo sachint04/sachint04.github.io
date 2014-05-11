@@ -1,28 +1,8 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Animation loop</title>
-	<style>
-	.body-text{
-		font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-		font-size: .9em;
-		color:#830202;
-	}
-	.snippet{
-	padding:10px;
-	margin-right: 50px;	
-	}
-	.fontBig{
-		font-size: 1.5em;
-	}
-	</style>
-</head>
-<body height="100%">
+
 <section id="story" style="height:100%">	
 	<p class="body-text">Lets start with HTML. Create new file with the name "animation-loop.html" and copy below code in the in it.
 </p>
-<div class="snippet">
+<div class="snippet" data-script= >
 		<script src="https://gist.github.com/sachint04/9703576.js"></script>
 	</div>
 <p class="body-text">Lets create a billboard with lights on it's eges. The style of billboard is inspired by glow sign in a Carnival. Where light bulbs trun on and off creating running light effect.  We will create 10x4 lights. Copy below code inside body tag
@@ -30,16 +10,65 @@
 <div class="snippet">
 	<script src="https://gist.github.com/sachint04/9461812.js"></script>
 	</div>
-	<p class="body-text">Lets apply style to the billboard. Create new CSS file and name it "style.css". Paste below code in newly created style.css.
+<p class="body-text">Lets apply style to the billboard. Create new CSS file and name it "style.css". Paste below code in newly created style.css.
 </p>
 	<div class="snippet">
 		<script src="https://gist.github.com/sachint04/9701913.js"></script>
 	</div>
-<p class="body-text">It is time to add some life to this billboard.  Paste below code in animation-loop.html.
+<p class="body-text">It is time to add some life to this billboard.  Let's define some variables to hold data.
 </p>
 	<div class="snippet">
-		<script src="https://gist.github.com/sachint04/9703523.js"></script>
+		<pre>
+$(document).ready(function(){
+	var len,counter,canplay,start,effects;
+	len 		=  $(".box").length;
+	counter 	= -1;
+	canPlay 	= false;
+	effects 	= [ "red",	"yellow"];
+});
+</pre>
+<p class="body-text">Let' write helper functions to initiate animation sequence. Copy below code inside JQuery default function.
+<pre>
+var initSequence = function(){
+	if(!canPlay)return;
+	if(counter < len-1){
+		counter++;
+		animate($(".box").eq(counter), 
+		{backgroundColor:effects[0]}, 
+		{backgroundColor:effects[1]})
+	}else{
+		//swap styles in effects array
+		$(".container h1").css("color", effects[1])
+		counter = -1;
+		effects.reverse();
+		initSequence();  
+	}
+}
+
+function animate(_elem, _start, _end){
+	$(_elem).css(_start);
+	$(_elem).animate(
+		_end,50,function(){
+			initSequence();
+		}
+	);
+}	
+</pre>
+<p class="body-text">Define click events for "Start" and "Stop" button.
+</p>
+<pre>
+
+$("input#start").click(function(){
+	if(!canPlay){
+		canPlay = true;
+		initSequence();
+	}
+})
+
+$("input#stop").click(function(){
+	canPlay = false;
+})
+</pre>
 	</div>
 </section>
-</body>
-</html>
+
