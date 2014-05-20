@@ -8,6 +8,28 @@ body{
 */
 
 /* Typekit font */
+@font-face {
+  font-family: 'lobster';
+  src: url('/fonts/Lobster_1.3.otf'); /* IE9 Compat Modes */       
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('/fonts/Roboto-Medium.ttf'); /* IE9 Compat Modes */       
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url('/fonts/Raleway-Regular.otf'); /* IE9 Compat Modes */       
+}
+@font-face {
+  font-family: 'sourcesanspro';
+  src: url('/fonts/SourceSansPro-Regular.otf'); /* IE9 Compat Modes */       
+}
+@font-face {
+  font-family: 'dancingscript';
+  src: url('/fonts/DancingScript-Regular.otf'); /* IE9 Compat Modes */       
+}
 
 
 a{
@@ -46,7 +68,7 @@ header{
    padding: 10px 0 0 20px;
 }
 .body-text{
-font-family:"liberation-sans", sans-serif;
+font-family:"raleway", sans-serif;
 font-size: 1em;
 color:#830202;
 
@@ -151,7 +173,7 @@ background-image: url('../img/top-band.png'), linear-gradient(rgba(243,243,243,1
     margin-left: 10%;
 }
 .topband .title{
-  font-family: "lobster";
+  font-family: 'lobster';
   font-size: 3.5em;
   color:#ff6a52;
 }
@@ -169,17 +191,13 @@ background-image: url('../img/top-band.png'), linear-gradient(rgba(243,243,243,1
     font-size: 1em;
 
 }
-.navbar-inverse .navbar-nav > li > a{
-    color: #FF0000;
-    font-family: Lucida Sans Unicode;
-    font-size: 1em;
-    padding-top: 13px;
-}
+
 .navbar-nav > li > a {
   padding-top: 5px;  
   padding-bottom: 5px; 
-  font-family: "liberation-sans";
+  font-family: "roboto";
   border-radius: 6px;
+  font-size: 1em;
 }
 
 
@@ -189,7 +207,7 @@ background-image: url('../img/top-band.png'), linear-gradient(rgba(243,243,243,1
 }
 .main-article h2{
     color: #830202;
-    font-family: "liberation-sans";
+    font-family: "sourcesanspro";
     font-size: 2.2em;
     margin: 20px 0px;
 }
